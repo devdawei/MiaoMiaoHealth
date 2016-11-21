@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喵喵健康" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="yKX-7n-6qj">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbL-Io-PNp">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="zgV-4t-Mbw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82x-2s-L9e">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="f5j-FW-Z4Y"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="devdawei" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95y-se-8Yu">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="82x-2s-L9e" firstAttribute="width" secondItem="95y-se-8Yu" secondAttribute="width" id="1Xf-Wp-9kJ"/>
+                            <constraint firstItem="hbL-Io-PNp" firstAttribute="top" secondItem="yKX-7n-6qj" secondAttribute="bottom" id="2fg-zL-xQk"/>
+                            <constraint firstItem="82x-2s-L9e" firstAttribute="centerX" secondItem="95y-se-8Yu" secondAttribute="centerX" id="88Z-aS-xQF"/>
+                            <constraint firstItem="95y-se-8Yu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9tM-tR-hec"/>
+                            <constraint firstItem="yKX-7n-6qj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="B0O-ns-aex"/>
+                            <constraint firstItem="82x-2s-L9e" firstAttribute="top" secondItem="95y-se-8Yu" secondAttribute="bottom" id="Eim-IK-t7Y"/>
+                            <constraint firstItem="yKX-7n-6qj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="2:3" id="GpS-Ab-Odi"/>
+                            <constraint firstItem="hbL-Io-PNp" firstAttribute="width" secondItem="yKX-7n-6qj" secondAttribute="width" id="Vna-KI-0Sy"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="95y-se-8Yu" secondAttribute="bottom" constant="20" id="Wjg-uZ-1aJ"/>
+                            <constraint firstItem="hbL-Io-PNp" firstAttribute="centerX" secondItem="yKX-7n-6qj" secondAttribute="centerX" id="sa1-rq-k7j"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="304"/>
+        </scene>
+    </scenes>
+</document>

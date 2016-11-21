@@ -1,0 +1,950 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9B77EA01D961FF1008B0295 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77E9F1D961FF1008B0295 /* main.m */; };
+		D9B77EB91D961FF1008B0295 /* MiaoMiaoHealthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EB81D961FF1008B0295 /* MiaoMiaoHealthTests.m */; };
+		D9B77EC41D961FF1008B0295 /* MiaoMiaoHealthUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EC31D961FF1008B0295 /* MiaoMiaoHealthUITests.m */; };
+		D9B77F3C1D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77ED31D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.m */; };
+		D9B77F3D1D96207B008B0295 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77ED51D96207B008B0295 /* AppDelegate.m */; };
+		D9B77F3E1D96207B008B0295 /* MMHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77ED81D96207B008B0295 /* MMHTabBarController.m */; };
+		D9B77F3F1D96207B008B0295 /* MMHTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EDA1D96207B008B0295 /* MMHTableCell.m */; };
+		D9B77F411D96207B008B0295 /* MMHLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B77EDF1D96207B008B0295 /* MMHLaunchScreen.storyboard */; };
+		D9B77F421D96207B008B0295 /* MMHAppConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EE21D96207B008B0295 /* MMHAppConst.m */; };
+		D9B77F431D96207B008B0295 /* MMHNotifyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EE41D96207B008B0295 /* MMHNotifyConst.m */; };
+		D9B77F441D96207B008B0295 /* MMHVendorConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EE61D96207B008B0295 /* MMHVendorConst.m */; };
+		D9B77F451D96207B008B0295 /* MMHDrinkWaterDMData.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EE91D96207B008B0295 /* MMHDrinkWaterDMData.m */; };
+		D9B77F461D96207B008B0295 /* MMHSingleLineInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EED1D96207B008B0295 /* MMHSingleLineInputController.m */; };
+		D9B77F471D96207B008B0295 /* MMHSingleLineInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B77EEE1D96207B008B0295 /* MMHSingleLineInputController.xib */; };
+		D9B77F481D96207B008B0295 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EF21D96207B008B0295 /* NSString+Helper.m */; };
+		D9B77F491D96207B008B0295 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EF41D96207B008B0295 /* UIColor+Helper.m */; };
+		D9B77F4A1D96207B008B0295 /* UINavigationBar+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EF61D96207B008B0295 /* UINavigationBar+Helper.m */; };
+		D9B77F4B1D96207B008B0295 /* UINavigationController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EF81D96207B008B0295 /* UINavigationController+Helper.m */; };
+		D9B77F4C1D96207B008B0295 /* UINavigationItem+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EFA1D96207B008B0295 /* UINavigationItem+Helper.m */; };
+		D9B77F4D1D96207B008B0295 /* UITabBarController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EFC1D96207B008B0295 /* UITabBarController+Helper.m */; };
+		D9B77F4E1D96207B008B0295 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EFE1D96207B008B0295 /* UIView+Helper.m */; };
+		D9B77F4F1D96207B008B0295 /* UIViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F001D96207B008B0295 /* UIViewController+Helper.m */; };
+		D9B77F501D96207B008B0295 /* MMHDrinkWaterNotifyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F031D96207B008B0295 /* MMHDrinkWaterNotifyManager.m */; };
+		D9B77F511D96207B008B0295 /* MMHHealthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F051D96207B008B0295 /* MMHHealthManager.m */; };
+		D9B77F521D96207B008B0295 /* MMHUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F071D96207B008B0295 /* MMHUserManager.m */; };
+		D9B77F541D96207B008B0295 /* MMHDrinkWaterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F0D1D96207B008B0295 /* MMHDrinkWaterController.m */; };
+		D9B77F551D96207B008B0295 /* MMHDrinkWaterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B77F0E1D96207B008B0295 /* MMHDrinkWaterController.xib */; };
+		D9B77F561D96207B008B0295 /* MMHDrinkWaterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F101D96207B008B0295 /* MMHDrinkWaterTableCell.m */; };
+		D9B77F571D96207B008B0295 /* MMHDrinkWaterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B77F111D96207B008B0295 /* MMHDrinkWaterTableCell.xib */; };
+		D9B77F581D96207B008B0295 /* MMHSportController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F141D96207B008B0295 /* MMHSportController.m */; };
+		D9B77F591D96207B008B0295 /* MMHSportController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B77F151D96207B008B0295 /* MMHSportController.xib */; };
+		D9B77F5A1D96207B008B0295 /* MMHSprotProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F171D96207B008B0295 /* MMHSprotProgressView.m */; };
+		D9B77F5B1D96207B008B0295 /* MMHAboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F1B1D96207B008B0295 /* MMHAboutUsController.m */; };
+		D9B77F5C1D96207B008B0295 /* MMHUserCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F1D1D96207B008B0295 /* MMHUserCenterController.m */; };
+		D9B77F5D1D96207B008B0295 /* MMHUserCenterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B77F1E1D96207B008B0295 /* MMHUserCenterController.xib */; };
+		D9B77F5E1D96207B008B0295 /* DVVAppStoreTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F221D96207B008B0295 /* DVVAppStoreTool.m */; };
+		D9B77F641D96207B008B0295 /* DVVSelectTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77F321D96207B008B0295 /* DVVSelectTimeView.m */; };
+		D9B77F6A1D9620DC008B0295 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B77F691D9620DC008B0295 /* HealthKit.framework */; };
+		D9B77F6B1D96272E008B0295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B77F091D96207B008B0295 /* Assets.xcassets */; };
+		F46EA89DCF2F7ADC84EC1B2F /* libPods-MiaoMiaoHealth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41818D12298604CBC0A9862A /* libPods-MiaoMiaoHealth.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9B77EB51D961FF1008B0295 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9B77E931D961FF1008B0295 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B77E9A1D961FF1008B0295;
+			remoteInfo = MiaoMiaoHealth;
+		};
+		D9B77EC01D961FF1008B0295 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9B77E931D961FF1008B0295 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B77E9A1D961FF1008B0295;
+			remoteInfo = MiaoMiaoHealth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		41818D12298604CBC0A9862A /* libPods-MiaoMiaoHealth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MiaoMiaoHealth.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4513CF7966D3C83DACD5D805 /* Pods-MiaoMiaoHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiaoMiaoHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiaoMiaoHealth/Pods-MiaoMiaoHealth.release.xcconfig"; sourceTree = "<group>"; };
+		7953C349B8672F978F47CCF0 /* Pods-MiaoMiaoHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiaoMiaoHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiaoMiaoHealth/Pods-MiaoMiaoHealth.debug.xcconfig"; sourceTree = "<group>"; };
+		D9B77E9B1D961FF1008B0295 /* MiaoMiaoHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiaoMiaoHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B77E9F1D961FF1008B0295 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D9B77EB41D961FF1008B0295 /* MiaoMiaoHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiaoMiaoHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B77EB81D961FF1008B0295 /* MiaoMiaoHealthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiaoMiaoHealthTests.m; sourceTree = "<group>"; };
+		D9B77EBA1D961FF1008B0295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B77EBF1D961FF1008B0295 /* MiaoMiaoHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiaoMiaoHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B77EC31D961FF1008B0295 /* MiaoMiaoHealthUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiaoMiaoHealthUITests.m; sourceTree = "<group>"; };
+		D9B77EC51D961FF1008B0295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B77ED21D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DidFinishLaunchHandle.h"; sourceTree = "<group>"; };
+		D9B77ED31D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DidFinishLaunchHandle.m"; sourceTree = "<group>"; };
+		D9B77ED41D96207B008B0295 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D9B77ED51D96207B008B0295 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D9B77ED71D96207B008B0295 /* MMHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHTabBarController.h; sourceTree = "<group>"; };
+		D9B77ED81D96207B008B0295 /* MMHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHTabBarController.m; sourceTree = "<group>"; };
+		D9B77ED91D96207B008B0295 /* MMHTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHTableCell.h; sourceTree = "<group>"; };
+		D9B77EDA1D96207B008B0295 /* MMHTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHTableCell.m; sourceTree = "<group>"; };
+		D9B77EDC1D96207B008B0295 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B77EDD1D96207B008B0295 /* MiaoMiaoHealth.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MiaoMiaoHealth.entitlements; sourceTree = "<group>"; };
+		D9B77EDE1D96207B008B0295 /* MiaoMiaoHealthy-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MiaoMiaoHealthy-PrefixHeader.pch"; sourceTree = "<group>"; };
+		D9B77EDF1D96207B008B0295 /* MMHLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MMHLaunchScreen.storyboard; sourceTree = "<group>"; };
+		D9B77EE11D96207B008B0295 /* MMHAppConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHAppConst.h; sourceTree = "<group>"; };
+		D9B77EE21D96207B008B0295 /* MMHAppConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHAppConst.m; sourceTree = "<group>"; };
+		D9B77EE31D96207B008B0295 /* MMHNotifyConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHNotifyConst.h; sourceTree = "<group>"; };
+		D9B77EE41D96207B008B0295 /* MMHNotifyConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHNotifyConst.m; sourceTree = "<group>"; };
+		D9B77EE51D96207B008B0295 /* MMHVendorConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHVendorConst.h; sourceTree = "<group>"; };
+		D9B77EE61D96207B008B0295 /* MMHVendorConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHVendorConst.m; sourceTree = "<group>"; };
+		D9B77EE81D96207B008B0295 /* MMHDrinkWaterDMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHDrinkWaterDMData.h; sourceTree = "<group>"; };
+		D9B77EE91D96207B008B0295 /* MMHDrinkWaterDMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHDrinkWaterDMData.m; sourceTree = "<group>"; };
+		D9B77EEC1D96207B008B0295 /* MMHSingleLineInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHSingleLineInputController.h; sourceTree = "<group>"; };
+		D9B77EED1D96207B008B0295 /* MMHSingleLineInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHSingleLineInputController.m; sourceTree = "<group>"; };
+		D9B77EEE1D96207B008B0295 /* MMHSingleLineInputController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHSingleLineInputController.xib; sourceTree = "<group>"; };
+		D9B77EF11D96207B008B0295 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		D9B77EF21D96207B008B0295 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		D9B77EF31D96207B008B0295 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
+		D9B77EF41D96207B008B0295 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
+		D9B77EF51D96207B008B0295 /* UINavigationBar+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Helper.h"; sourceTree = "<group>"; };
+		D9B77EF61D96207B008B0295 /* UINavigationBar+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Helper.m"; sourceTree = "<group>"; };
+		D9B77EF71D96207B008B0295 /* UINavigationController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Helper.h"; sourceTree = "<group>"; };
+		D9B77EF81D96207B008B0295 /* UINavigationController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Helper.m"; sourceTree = "<group>"; };
+		D9B77EF91D96207B008B0295 /* UINavigationItem+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Helper.h"; sourceTree = "<group>"; };
+		D9B77EFA1D96207B008B0295 /* UINavigationItem+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Helper.m"; sourceTree = "<group>"; };
+		D9B77EFB1D96207B008B0295 /* UITabBarController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Helper.h"; sourceTree = "<group>"; };
+		D9B77EFC1D96207B008B0295 /* UITabBarController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Helper.m"; sourceTree = "<group>"; };
+		D9B77EFD1D96207B008B0295 /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
+		D9B77EFE1D96207B008B0295 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
+		D9B77EFF1D96207B008B0295 /* UIViewController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helper.h"; sourceTree = "<group>"; };
+		D9B77F001D96207B008B0295 /* UIViewController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helper.m"; sourceTree = "<group>"; };
+		D9B77F021D96207B008B0295 /* MMHDrinkWaterNotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHDrinkWaterNotifyManager.h; sourceTree = "<group>"; };
+		D9B77F031D96207B008B0295 /* MMHDrinkWaterNotifyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHDrinkWaterNotifyManager.m; sourceTree = "<group>"; };
+		D9B77F041D96207B008B0295 /* MMHHealthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHHealthManager.h; sourceTree = "<group>"; };
+		D9B77F051D96207B008B0295 /* MMHHealthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHHealthManager.m; sourceTree = "<group>"; };
+		D9B77F061D96207B008B0295 /* MMHUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHUserManager.h; sourceTree = "<group>"; };
+		D9B77F071D96207B008B0295 /* MMHUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHUserManager.m; sourceTree = "<group>"; };
+		D9B77F091D96207B008B0295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9B77F0C1D96207B008B0295 /* MMHDrinkWaterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHDrinkWaterController.h; sourceTree = "<group>"; };
+		D9B77F0D1D96207B008B0295 /* MMHDrinkWaterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHDrinkWaterController.m; sourceTree = "<group>"; };
+		D9B77F0E1D96207B008B0295 /* MMHDrinkWaterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHDrinkWaterController.xib; sourceTree = "<group>"; };
+		D9B77F0F1D96207B008B0295 /* MMHDrinkWaterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHDrinkWaterTableCell.h; sourceTree = "<group>"; };
+		D9B77F101D96207B008B0295 /* MMHDrinkWaterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHDrinkWaterTableCell.m; sourceTree = "<group>"; };
+		D9B77F111D96207B008B0295 /* MMHDrinkWaterTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHDrinkWaterTableCell.xib; sourceTree = "<group>"; };
+		D9B77F131D96207B008B0295 /* MMHSportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHSportController.h; sourceTree = "<group>"; };
+		D9B77F141D96207B008B0295 /* MMHSportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHSportController.m; sourceTree = "<group>"; };
+		D9B77F151D96207B008B0295 /* MMHSportController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHSportController.xib; sourceTree = "<group>"; };
+		D9B77F161D96207B008B0295 /* MMHSprotProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHSprotProgressView.h; sourceTree = "<group>"; };
+		D9B77F171D96207B008B0295 /* MMHSprotProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHSprotProgressView.m; sourceTree = "<group>"; };
+		D9B77F1A1D96207B008B0295 /* MMHAboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHAboutUsController.h; sourceTree = "<group>"; };
+		D9B77F1B1D96207B008B0295 /* MMHAboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHAboutUsController.m; sourceTree = "<group>"; };
+		D9B77F1C1D96207B008B0295 /* MMHUserCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHUserCenterController.h; sourceTree = "<group>"; };
+		D9B77F1D1D96207B008B0295 /* MMHUserCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHUserCenterController.m; sourceTree = "<group>"; };
+		D9B77F1E1D96207B008B0295 /* MMHUserCenterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMHUserCenterController.xib; sourceTree = "<group>"; };
+		D9B77F211D96207B008B0295 /* DVVAppStoreTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVVAppStoreTool.h; sourceTree = "<group>"; };
+		D9B77F221D96207B008B0295 /* DVVAppStoreTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVVAppStoreTool.m; sourceTree = "<group>"; };
+		D9B77F311D96207B008B0295 /* DVVSelectTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVVSelectTimeView.h; sourceTree = "<group>"; };
+		D9B77F321D96207B008B0295 /* DVVSelectTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVVSelectTimeView.m; sourceTree = "<group>"; };
+		D9B77F691D9620DC008B0295 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9B77E981D961FF1008B0295 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B77F6A1D9620DC008B0295 /* HealthKit.framework in Frameworks */,
+				F46EA89DCF2F7ADC84EC1B2F /* libPods-MiaoMiaoHealth.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B77EB11D961FF1008B0295 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B77EBC1D961FF1008B0295 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18A7D5CFA53A86836C2D53AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7953C349B8672F978F47CCF0 /* Pods-MiaoMiaoHealth.debug.xcconfig */,
+				4513CF7966D3C83DACD5D805 /* Pods-MiaoMiaoHealth.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9B77E921D961FF1008B0295 = {
+			isa = PBXGroup;
+			children = (
+				D9B77E9D1D961FF1008B0295 /* MiaoMiaoHealth */,
+				D9B77EB71D961FF1008B0295 /* MiaoMiaoHealthTests */,
+				D9B77EC21D961FF1008B0295 /* MiaoMiaoHealthUITests */,
+				D9B77E9C1D961FF1008B0295 /* Products */,
+				D9B77F681D9620DC008B0295 /* Frameworks */,
+				18A7D5CFA53A86836C2D53AD /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D9B77E9C1D961FF1008B0295 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77E9B1D961FF1008B0295 /* MiaoMiaoHealth.app */,
+				D9B77EB41D961FF1008B0295 /* MiaoMiaoHealthTests.xctest */,
+				D9B77EBF1D961FF1008B0295 /* MiaoMiaoHealthUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9B77E9D1D961FF1008B0295 /* MiaoMiaoHealth */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77ED11D96207B008B0295 /* AppDelegate */,
+				D9B77F011D96207B008B0295 /* Manager */,
+				D9B77F0A1D96207B008B0295 /* Section */,
+				D9B77EE71D96207B008B0295 /* DataModel */,
+				D9B77EEA1D96207B008B0295 /* General */,
+				D9B77EF01D96207B008B0295 /* Helper */,
+				D9B77F1F1D96207B008B0295 /* Vendor */,
+				D9B77ED61D96207B008B0295 /* Base */,
+				D9B77EE01D96207B008B0295 /* Const */,
+				D9B77F081D96207B008B0295 /* Resource */,
+				D9B77EDB1D96207B008B0295 /* Config */,
+				D9B77E9E1D961FF1008B0295 /* Supporting Files */,
+			);
+			path = MiaoMiaoHealth;
+			sourceTree = "<group>";
+		};
+		D9B77E9E1D961FF1008B0295 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77E9F1D961FF1008B0295 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9B77EB71D961FF1008B0295 /* MiaoMiaoHealthTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77EB81D961FF1008B0295 /* MiaoMiaoHealthTests.m */,
+				D9B77EBA1D961FF1008B0295 /* Info.plist */,
+			);
+			path = MiaoMiaoHealthTests;
+			sourceTree = "<group>";
+		};
+		D9B77EC21D961FF1008B0295 /* MiaoMiaoHealthUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77EC31D961FF1008B0295 /* MiaoMiaoHealthUITests.m */,
+				D9B77EC51D961FF1008B0295 /* Info.plist */,
+			);
+			path = MiaoMiaoHealthUITests;
+			sourceTree = "<group>";
+		};
+		D9B77ED11D96207B008B0295 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77ED21D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.h */,
+				D9B77ED31D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.m */,
+				D9B77ED41D96207B008B0295 /* AppDelegate.h */,
+				D9B77ED51D96207B008B0295 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D9B77ED61D96207B008B0295 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77ED71D96207B008B0295 /* MMHTabBarController.h */,
+				D9B77ED81D96207B008B0295 /* MMHTabBarController.m */,
+				D9B77ED91D96207B008B0295 /* MMHTableCell.h */,
+				D9B77EDA1D96207B008B0295 /* MMHTableCell.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D9B77EDB1D96207B008B0295 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77EDC1D96207B008B0295 /* Info.plist */,
+				D9B77EDD1D96207B008B0295 /* MiaoMiaoHealth.entitlements */,
+				D9B77EDE1D96207B008B0295 /* MiaoMiaoHealthy-PrefixHeader.pch */,
+				D9B77EDF1D96207B008B0295 /* MMHLaunchScreen.storyboard */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D9B77EE01D96207B008B0295 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77EE11D96207B008B0295 /* MMHAppConst.h */,
+				D9B77EE21D96207B008B0295 /* MMHAppConst.m */,
+				D9B77EE31D96207B008B0295 /* MMHNotifyConst.h */,
+				D9B77EE41D96207B008B0295 /* MMHNotifyConst.m */,
+				D9B77EE51D96207B008B0295 /* MMHVendorConst.h */,
+				D9B77EE61D96207B008B0295 /* MMHVendorConst.m */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		D9B77EE71D96207B008B0295 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77EE81D96207B008B0295 /* MMHDrinkWaterDMData.h */,
+				D9B77EE91D96207B008B0295 /* MMHDrinkWaterDMData.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		D9B77EEA1D96207B008B0295 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77EEB1D96207B008B0295 /* Controller */,
+				D9B77EEF1D96207B008B0295 /* View */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		D9B77EEB1D96207B008B0295 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77EEC1D96207B008B0295 /* MMHSingleLineInputController.h */,
+				D9B77EED1D96207B008B0295 /* MMHSingleLineInputController.m */,
+				D9B77EEE1D96207B008B0295 /* MMHSingleLineInputController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9B77EEF1D96207B008B0295 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9B77EF01D96207B008B0295 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77EF11D96207B008B0295 /* NSString+Helper.h */,
+				D9B77EF21D96207B008B0295 /* NSString+Helper.m */,
+				D9B77EF31D96207B008B0295 /* UIColor+Helper.h */,
+				D9B77EF41D96207B008B0295 /* UIColor+Helper.m */,
+				D9B77EF51D96207B008B0295 /* UINavigationBar+Helper.h */,
+				D9B77EF61D96207B008B0295 /* UINavigationBar+Helper.m */,
+				D9B77EF71D96207B008B0295 /* UINavigationController+Helper.h */,
+				D9B77EF81D96207B008B0295 /* UINavigationController+Helper.m */,
+				D9B77EF91D96207B008B0295 /* UINavigationItem+Helper.h */,
+				D9B77EFA1D96207B008B0295 /* UINavigationItem+Helper.m */,
+				D9B77EFB1D96207B008B0295 /* UITabBarController+Helper.h */,
+				D9B77EFC1D96207B008B0295 /* UITabBarController+Helper.m */,
+				D9B77EFD1D96207B008B0295 /* UIView+Helper.h */,
+				D9B77EFE1D96207B008B0295 /* UIView+Helper.m */,
+				D9B77EFF1D96207B008B0295 /* UIViewController+Helper.h */,
+				D9B77F001D96207B008B0295 /* UIViewController+Helper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D9B77F011D96207B008B0295 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F021D96207B008B0295 /* MMHDrinkWaterNotifyManager.h */,
+				D9B77F031D96207B008B0295 /* MMHDrinkWaterNotifyManager.m */,
+				D9B77F041D96207B008B0295 /* MMHHealthManager.h */,
+				D9B77F051D96207B008B0295 /* MMHHealthManager.m */,
+				D9B77F061D96207B008B0295 /* MMHUserManager.h */,
+				D9B77F071D96207B008B0295 /* MMHUserManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D9B77F081D96207B008B0295 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F091D96207B008B0295 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D9B77F0A1D96207B008B0295 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F121D96207B008B0295 /* Sport */,
+				D9B77F0B1D96207B008B0295 /* DrinkWater */,
+				D9B77F181D96207B008B0295 /* UserCenter */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		D9B77F0B1D96207B008B0295 /* DrinkWater */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F0C1D96207B008B0295 /* MMHDrinkWaterController.h */,
+				D9B77F0D1D96207B008B0295 /* MMHDrinkWaterController.m */,
+				D9B77F0E1D96207B008B0295 /* MMHDrinkWaterController.xib */,
+				D9B77F0F1D96207B008B0295 /* MMHDrinkWaterTableCell.h */,
+				D9B77F101D96207B008B0295 /* MMHDrinkWaterTableCell.m */,
+				D9B77F111D96207B008B0295 /* MMHDrinkWaterTableCell.xib */,
+			);
+			path = DrinkWater;
+			sourceTree = "<group>";
+		};
+		D9B77F121D96207B008B0295 /* Sport */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F131D96207B008B0295 /* MMHSportController.h */,
+				D9B77F141D96207B008B0295 /* MMHSportController.m */,
+				D9B77F151D96207B008B0295 /* MMHSportController.xib */,
+				D9B77F161D96207B008B0295 /* MMHSprotProgressView.h */,
+				D9B77F171D96207B008B0295 /* MMHSprotProgressView.m */,
+			);
+			path = Sport;
+			sourceTree = "<group>";
+		};
+		D9B77F181D96207B008B0295 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F1C1D96207B008B0295 /* MMHUserCenterController.h */,
+				D9B77F1D1D96207B008B0295 /* MMHUserCenterController.m */,
+				D9B77F1E1D96207B008B0295 /* MMHUserCenterController.xib */,
+				D9B77F191D96207B008B0295 /* AboutUs */,
+			);
+			path = UserCenter;
+			sourceTree = "<group>";
+		};
+		D9B77F191D96207B008B0295 /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F1A1D96207B008B0295 /* MMHAboutUsController.h */,
+				D9B77F1B1D96207B008B0295 /* MMHAboutUsController.m */,
+			);
+			path = AboutUs;
+			sourceTree = "<group>";
+		};
+		D9B77F1F1D96207B008B0295 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F201D96207B008B0295 /* DVVAppStoreTool */,
+				D9B77F301D96207B008B0295 /* DVVSelectTimeView */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		D9B77F201D96207B008B0295 /* DVVAppStoreTool */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F211D96207B008B0295 /* DVVAppStoreTool.h */,
+				D9B77F221D96207B008B0295 /* DVVAppStoreTool.m */,
+			);
+			path = DVVAppStoreTool;
+			sourceTree = "<group>";
+		};
+		D9B77F301D96207B008B0295 /* DVVSelectTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F311D96207B008B0295 /* DVVSelectTimeView.h */,
+				D9B77F321D96207B008B0295 /* DVVSelectTimeView.m */,
+			);
+			path = DVVSelectTimeView;
+			sourceTree = "<group>";
+		};
+		D9B77F681D9620DC008B0295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9B77F691D9620DC008B0295 /* HealthKit.framework */,
+				41818D12298604CBC0A9862A /* libPods-MiaoMiaoHealth.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9B77E9A1D961FF1008B0295 /* MiaoMiaoHealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B77EC81D961FF1008B0295 /* Build configuration list for PBXNativeTarget "MiaoMiaoHealth" */;
+			buildPhases = (
+				A7019A30D5514F5D2729C344 /* [CP] Check Pods Manifest.lock */,
+				D9B77E971D961FF1008B0295 /* Sources */,
+				D9B77E981D961FF1008B0295 /* Frameworks */,
+				D9B77E991D961FF1008B0295 /* Resources */,
+				1237A2F280525ECFC7A37769 /* [CP] Embed Pods Frameworks */,
+				009529113E7279109184B914 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiaoMiaoHealth;
+			productName = MiaoMiaoHealth;
+			productReference = D9B77E9B1D961FF1008B0295 /* MiaoMiaoHealth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9B77EB31D961FF1008B0295 /* MiaoMiaoHealthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B77ECB1D961FF1008B0295 /* Build configuration list for PBXNativeTarget "MiaoMiaoHealthTests" */;
+			buildPhases = (
+				D9B77EB01D961FF1008B0295 /* Sources */,
+				D9B77EB11D961FF1008B0295 /* Frameworks */,
+				D9B77EB21D961FF1008B0295 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9B77EB61D961FF1008B0295 /* PBXTargetDependency */,
+			);
+			name = MiaoMiaoHealthTests;
+			productName = MiaoMiaoHealthTests;
+			productReference = D9B77EB41D961FF1008B0295 /* MiaoMiaoHealthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9B77EBE1D961FF1008B0295 /* MiaoMiaoHealthUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B77ECE1D961FF1008B0295 /* Build configuration list for PBXNativeTarget "MiaoMiaoHealthUITests" */;
+			buildPhases = (
+				D9B77EBB1D961FF1008B0295 /* Sources */,
+				D9B77EBC1D961FF1008B0295 /* Frameworks */,
+				D9B77EBD1D961FF1008B0295 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9B77EC11D961FF1008B0295 /* PBXTargetDependency */,
+			);
+			name = MiaoMiaoHealthUITests;
+			productName = MiaoMiaoHealthUITests;
+			productReference = D9B77EBF1D961FF1008B0295 /* MiaoMiaoHealthUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9B77E931D961FF1008B0295 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = devdawei;
+				TargetAttributes = {
+					D9B77E9A1D961FF1008B0295 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5PC72CFZ3Z;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					D9B77EB31D961FF1008B0295 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5PC72CFZ3Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D9B77E9A1D961FF1008B0295;
+					};
+					D9B77EBE1D961FF1008B0295 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5PC72CFZ3Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D9B77E9A1D961FF1008B0295;
+					};
+				};
+			};
+			buildConfigurationList = D9B77E961D961FF1008B0295 /* Build configuration list for PBXProject "MiaoMiaoHealth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9B77E921D961FF1008B0295;
+			productRefGroup = D9B77E9C1D961FF1008B0295 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9B77E9A1D961FF1008B0295 /* MiaoMiaoHealth */,
+				D9B77EB31D961FF1008B0295 /* MiaoMiaoHealthTests */,
+				D9B77EBE1D961FF1008B0295 /* MiaoMiaoHealthUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9B77E991D961FF1008B0295 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B77F6B1D96272E008B0295 /* Assets.xcassets in Resources */,
+				D9B77F571D96207B008B0295 /* MMHDrinkWaterTableCell.xib in Resources */,
+				D9B77F591D96207B008B0295 /* MMHSportController.xib in Resources */,
+				D9B77F5D1D96207B008B0295 /* MMHUserCenterController.xib in Resources */,
+				D9B77F471D96207B008B0295 /* MMHSingleLineInputController.xib in Resources */,
+				D9B77F411D96207B008B0295 /* MMHLaunchScreen.storyboard in Resources */,
+				D9B77F551D96207B008B0295 /* MMHDrinkWaterController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B77EB21D961FF1008B0295 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B77EBD1D961FF1008B0295 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		009529113E7279109184B914 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoMiaoHealth/Pods-MiaoMiaoHealth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1237A2F280525ECFC7A37769 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoMiaoHealth/Pods-MiaoMiaoHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7019A30D5514F5D2729C344 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9B77E971D961FF1008B0295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B77F5E1D96207B008B0295 /* DVVAppStoreTool.m in Sources */,
+				D9B77F511D96207B008B0295 /* MMHHealthManager.m in Sources */,
+				D9B77F521D96207B008B0295 /* MMHUserManager.m in Sources */,
+				D9B77F5B1D96207B008B0295 /* MMHAboutUsController.m in Sources */,
+				D9B77F3C1D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.m in Sources */,
+				D9B77F5C1D96207B008B0295 /* MMHUserCenterController.m in Sources */,
+				D9B77EA01D961FF1008B0295 /* main.m in Sources */,
+				D9B77F5A1D96207B008B0295 /* MMHSprotProgressView.m in Sources */,
+				D9B77F4F1D96207B008B0295 /* UIViewController+Helper.m in Sources */,
+				D9B77F581D96207B008B0295 /* MMHSportController.m in Sources */,
+				D9B77F501D96207B008B0295 /* MMHDrinkWaterNotifyManager.m in Sources */,
+				D9B77F441D96207B008B0295 /* MMHVendorConst.m in Sources */,
+				D9B77F561D96207B008B0295 /* MMHDrinkWaterTableCell.m in Sources */,
+				D9B77F3E1D96207B008B0295 /* MMHTabBarController.m in Sources */,
+				D9B77F3F1D96207B008B0295 /* MMHTableCell.m in Sources */,
+				D9B77F461D96207B008B0295 /* MMHSingleLineInputController.m in Sources */,
+				D9B77F451D96207B008B0295 /* MMHDrinkWaterDMData.m in Sources */,
+				D9B77F641D96207B008B0295 /* DVVSelectTimeView.m in Sources */,
+				D9B77F4B1D96207B008B0295 /* UINavigationController+Helper.m in Sources */,
+				D9B77F4C1D96207B008B0295 /* UINavigationItem+Helper.m in Sources */,
+				D9B77F431D96207B008B0295 /* MMHNotifyConst.m in Sources */,
+				D9B77F421D96207B008B0295 /* MMHAppConst.m in Sources */,
+				D9B77F541D96207B008B0295 /* MMHDrinkWaterController.m in Sources */,
+				D9B77F4A1D96207B008B0295 /* UINavigationBar+Helper.m in Sources */,
+				D9B77F3D1D96207B008B0295 /* AppDelegate.m in Sources */,
+				D9B77F4E1D96207B008B0295 /* UIView+Helper.m in Sources */,
+				D9B77F481D96207B008B0295 /* NSString+Helper.m in Sources */,
+				D9B77F491D96207B008B0295 /* UIColor+Helper.m in Sources */,
+				D9B77F4D1D96207B008B0295 /* UITabBarController+Helper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B77EB01D961FF1008B0295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B77EB91D961FF1008B0295 /* MiaoMiaoHealthTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B77EBB1D961FF1008B0295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B77EC41D961FF1008B0295 /* MiaoMiaoHealthUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9B77EB61D961FF1008B0295 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9B77E9A1D961FF1008B0295 /* MiaoMiaoHealth */;
+			targetProxy = D9B77EB51D961FF1008B0295 /* PBXContainerItemProxy */;
+		};
+		D9B77EC11D961FF1008B0295 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9B77E9A1D961FF1008B0295 /* MiaoMiaoHealth */;
+			targetProxy = D9B77EC01D961FF1008B0295 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D9B77EC61D961FF1008B0295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9B77EC71D961FF1008B0295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9B77EC91D961FF1008B0295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7953C349B8672F978F47CCF0 /* Pods-MiaoMiaoHealth.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth.entitlements";
+				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealthy-PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MiaoMiaoHealth/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D9B77ECA1D961FF1008B0295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4513CF7966D3C83DACD5D805 /* Pods-MiaoMiaoHealth.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth.entitlements";
+				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealthy-PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MiaoMiaoHealth/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D9B77ECC1D961FF1008B0295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				INFOPLIST_FILE = MiaoMiaoHealthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiaoMiaoHealth.app/MiaoMiaoHealth";
+			};
+			name = Debug;
+		};
+		D9B77ECD1D961FF1008B0295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				INFOPLIST_FILE = MiaoMiaoHealthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiaoMiaoHealth.app/MiaoMiaoHealth";
+			};
+			name = Release;
+		};
+		D9B77ECF1D961FF1008B0295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				INFOPLIST_FILE = MiaoMiaoHealthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MiaoMiaoHealth;
+			};
+			name = Debug;
+		};
+		D9B77ED01D961FF1008B0295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				INFOPLIST_FILE = MiaoMiaoHealthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MiaoMiaoHealth;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9B77E961D961FF1008B0295 /* Build configuration list for PBXProject "MiaoMiaoHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B77EC61D961FF1008B0295 /* Debug */,
+				D9B77EC71D961FF1008B0295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B77EC81D961FF1008B0295 /* Build configuration list for PBXNativeTarget "MiaoMiaoHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B77EC91D961FF1008B0295 /* Debug */,
+				D9B77ECA1D961FF1008B0295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B77ECB1D961FF1008B0295 /* Build configuration list for PBXNativeTarget "MiaoMiaoHealthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B77ECC1D961FF1008B0295 /* Debug */,
+				D9B77ECD1D961FF1008B0295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B77ECE1D961FF1008B0295 /* Build configuration list for PBXNativeTarget "MiaoMiaoHealthUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B77ECF1D961FF1008B0295 /* Debug */,
+				D9B77ED01D961FF1008B0295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9B77E931D961FF1008B0295 /* Project object */;
+}

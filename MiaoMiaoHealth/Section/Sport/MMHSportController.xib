@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MMHSportController">
+            <connections>
+                <outlet property="distanceLabel" destination="aTG-4i-tab" id="edN-b3-uDr"/>
+                <outlet property="progressContentView" destination="Gjr-g9-2dg" id="x1f-iY-Bkg"/>
+                <outlet property="progressContentViewTopConstraint" destination="lcK-Ik-y29" id="H87-1C-ynf"/>
+                <outlet property="scrollView" destination="yzJ-t7-yWn" id="Emd-gb-vfN"/>
+                <outlet property="todayGoalLabel" destination="WlH-Pa-e7Z" id="ciO-Mt-Q7E"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzJ-t7-yWn">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gf-om-XHf">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="zdc-d8-iww"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日目标：0步" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlH-Pa-e7Z">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjr-g9-2dg">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="4p0-ob-MT2"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="步行+跑步距离：0.00公里" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTG-4i-tab">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="WlH-Pa-e7Z" firstAttribute="top" secondItem="7Gf-om-XHf" secondAttribute="bottom" id="35c-cs-Bat"/>
+                        <constraint firstItem="7Gf-om-XHf" firstAttribute="top" secondItem="yzJ-t7-yWn" secondAttribute="top" id="ApK-Qw-vZS"/>
+                        <constraint firstItem="WlH-Pa-e7Z" firstAttribute="leading" secondItem="yzJ-t7-yWn" secondAttribute="leading" constant="12" id="BzZ-PJ-afI"/>
+                        <constraint firstAttribute="trailing" secondItem="7Gf-om-XHf" secondAttribute="trailing" id="Cg8-ae-tdD"/>
+                        <constraint firstAttribute="bottom" secondItem="aTG-4i-tab" secondAttribute="bottom" constant="20" id="D2c-yd-9au"/>
+                        <constraint firstAttribute="trailing" secondItem="aTG-4i-tab" secondAttribute="trailing" constant="12" id="O9t-XS-bMx"/>
+                        <constraint firstItem="aTG-4i-tab" firstAttribute="top" secondItem="Gjr-g9-2dg" secondAttribute="bottom" constant="12" id="OEd-fc-TJG"/>
+                        <constraint firstAttribute="trailing" secondItem="Gjr-g9-2dg" secondAttribute="trailing" id="Sal-Lp-gYV"/>
+                        <constraint firstItem="7Gf-om-XHf" firstAttribute="width" secondItem="yzJ-t7-yWn" secondAttribute="width" id="Y5I-gD-IfP"/>
+                        <constraint firstAttribute="trailing" secondItem="WlH-Pa-e7Z" secondAttribute="trailing" constant="12" id="cPi-AO-Kax"/>
+                        <constraint firstItem="Gjr-g9-2dg" firstAttribute="leading" secondItem="yzJ-t7-yWn" secondAttribute="leading" id="dN6-IH-5Ff"/>
+                        <constraint firstItem="7Gf-om-XHf" firstAttribute="leading" secondItem="yzJ-t7-yWn" secondAttribute="leading" id="jSP-cz-9p0"/>
+                        <constraint firstItem="Gjr-g9-2dg" firstAttribute="top" secondItem="WlH-Pa-e7Z" secondAttribute="bottom" constant="170" id="lcK-Ik-y29"/>
+                        <constraint firstItem="aTG-4i-tab" firstAttribute="leading" secondItem="yzJ-t7-yWn" secondAttribute="leading" constant="12" id="mZJ-Mp-v0c"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yzJ-t7-yWn" secondAttribute="bottom" id="cpL-Kj-Eih"/>
+                <constraint firstItem="yzJ-t7-yWn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ifO-O6-9v3"/>
+                <constraint firstItem="yzJ-t7-yWn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nxT-Cy-cCh"/>
+                <constraint firstAttribute="trailing" secondItem="yzJ-t7-yWn" secondAttribute="trailing" id="vFY-jt-xfy"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

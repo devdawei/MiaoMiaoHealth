@@ -1,0 +1,52 @@
+//
+//  MiaoMiaoHealth-PrefixHeader.pch
+//  MiaoMiaoHealth
+//
+//  Created by 大威 on 2016/8/24.
+//  Copyright © 2016年 devdawei. All rights reserved.
+//
+
+#ifndef MiaoMiaoHealthy_PrefixHeader_pch
+#define MiaoMiaoHealthy_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+// Const
+#import "MMHAppConst.h"
+#import "MMHNotifyConst.h"
+#import "MMHVendorConst.h"
+
+// Helper
+#import "UIColor+Helper.h"
+#import "NSString+Helper.h"
+#import "UIView+Helper.h"
+#import "UINavigationController+Helper.h"
+#import "UIViewController+Helper.h"
+#import "UITabBarController+Helper.h"
+
+// Coding
+#import "DVVCoding.h"
+// 数据存储
+#import <DVVArchiver.h>
+
+#import <DVVToast.h>
+#import <DVVLoading.h>
+
+// 自动布局
+#import <Masonry.h>
+
+// 数据模型转换
+#import <YYModel/YYModel.h>
+
+// 本地缓存的用户数据
+#import "MMHUserManager.h"
+
+// 统计
+#import <UMMobClick/MobClick.h>
+
+#endif
+
+#endif /* MiaoMiaoHealth_PrefixHeader_pch */

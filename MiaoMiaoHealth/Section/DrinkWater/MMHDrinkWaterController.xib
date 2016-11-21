@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MMHDrinkWaterController">
+            <connections>
+                <outlet property="tableView" destination="Cgh-dF-pkj" id="wAC-gq-txs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cgh-dF-pkj">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="QUL-ry-ja8"/>
+                        <outlet property="delegate" destination="-1" id="y76-xh-qAD"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Cgh-dF-pkj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7o0-19-g7b"/>
+                <constraint firstAttribute="trailing" secondItem="Cgh-dF-pkj" secondAttribute="trailing" id="RXG-VV-srn"/>
+                <constraint firstItem="Cgh-dF-pkj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="buP-Qf-9nm"/>
+                <constraint firstAttribute="bottom" secondItem="Cgh-dF-pkj" secondAttribute="bottom" id="kfv-Ee-wmd"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
