@@ -26,11 +26,11 @@
 // iOS版本
 #define IOSVersion                          [[[UIDevice currentDevice] systemVersion] floatValue]
 #define IS_IOS7                             (IOSVersion == 7.0)
-#define IS_IOS7_Later                       (IOSVersion >= 7.0)
+#define IS_IOS7_LATER                       (IOSVersion >= 7.0)
 #define IS_IOS8                             (IOSVersion == 8.0)
-#define IS_IOS8_Later                       (IOSVersion >= 8.0)
+#define IS_IOS8_LATER                       (IOSVersion >= 8.0)
 #define IS_IOS9                             (IOSVersion == 9.0)
-#define IS_IOS9_Later                       (IOSVersion >= 9.0)
+#define IS_IOS9_LATER                       (IOSVersion >= 9.0)
 
 // 颜色
 #define RGBColor(r, g, b) [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]

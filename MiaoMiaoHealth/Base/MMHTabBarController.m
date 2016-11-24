@@ -36,6 +36,17 @@ typedef NS_OPTIONS(NSInteger, MMHTabBarItemType) {
     return tabBarController;
 }
 
+- (void)naviControllerPopToRootController
+{
+    for(UIViewController *vc in self.viewControllers)
+    {
+        if ([vc isKindOfClass:[UINavigationController class]])
+        {
+            [(UINavigationController *)vc popToRootViewControllerAnimated:NO];
+        }
+    }
+}
+
 - (instancetype)init
 {
     self = [super init];

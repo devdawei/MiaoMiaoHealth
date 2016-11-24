@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, MMHUserCenterSelectImageType)
 static CGFloat const kHeaderRatio = 1.0;
 static NSString * const kCellIdentifier = @"kCellIdentifier";
 
-@interface MMHUserCenterController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UIImagePickerControllerDelegate>
+@interface MMHUserCenterController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UIImagePickerControllerDelegate, UIViewControllerPreviewingDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIView *headerView;
@@ -40,6 +40,8 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
 @property (nonatomic, strong) NSMutableArray *markArray;
 
 @property (nonatomic, assign) MMHUserCenterSelectImageType selectImageType;
+
+//@property (nonatomic, strong) MMHAboutUsController *aboutUsVC;
 
 @end
 
@@ -54,7 +56,6 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     self.view.backgroundColor = [MMHAppConst controllerBgColor];
     // 此界面隐藏导航栏
     self.fd_prefersNavigationBarHidden = YES;
-//    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self initSelf];
     
@@ -72,7 +73,7 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     [super viewWillLayoutSubviews];
     
     _headerView.bounds = CGRectMake(0, 0, ScreenWidth, ScreenWidth * kHeaderRatio);
-//    _footerView.bounds = CGRectMake(0, 0, ScreenWidth, 60); // 暂时没用到FooterView
+    _footerView.bounds = CGRectMake(0, 0, ScreenWidth, 24);
     self.tableView.tableHeaderView = self.headerView;
     self.tableView.tableFooterView = self.footerView;
 }
@@ -180,6 +181,63 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     }
 }
 
+- (void)pushToAboutUSController
+{
+    MMHAboutUsController *aboutUsVC = [MMHAboutUsController new];
+    aboutUsVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:aboutUsVC animated:YES];
+    [self statisticsIntoAboutUsController];
+}
+
+- (void)pushToStepGoalController
+{
+    for (MMHTableCell *cell in self.tableView.visibleCells)
+    {
+        if ([cell.titleString isEqualToString:@"步数目标"])
+        {
+            [self pushToStepGoalControllerWithCell:cell];
+            break;
+        }
+    }
+}
+
+- (void)pushToStepGoalControllerWithCell:(MMHTableCell *)cell
+{
+    MMHSingleLineInputController *singleLineInputVC = [MMHSingleLineInputController new];
+    singleLineInputVC.navigationItem.title = @"步数目标";
+    singleLineInputVC.keyboardType = UIKeyboardTypeNumberPad; // 没有小数点的数字键盘
+    singleLineInputVC.text = [cell.markString substringWithRange:NSMakeRange(0, cell.markString.length - 1)]; // 默认显示内容
+    singleLineInputVC.placeholder = @"请输入步数";
+    WS;
+    [singleLineInputVC setDoneBlock:^(NSString *contentString) {
+        DLog(@"%@", contentString);
+        SWS;
+        if (contentString &&
+            contentString.length)
+        {
+            [MMHUserManager sharedManager].stepGoal = [contentString integerValue];
+            // 缓存用户数据
+            [[MMHUserManager sharedManager] storage];
+            // 重新加载数据
+            [strongSelf initData];
+            // 刷新表格
+            [strongSelf.tableView reloadData];
+            // 发送步数目标改变的通知
+            [[NSNotificationCenter defaultCenter] postNotificationName:kStepGoalChangeNotify object:nil];
+        }
+    }];
+    
+    singleLineInputVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:singleLineInputVC animated:YES];
+    
+    [MobClick event:@"IntoChangeStepGoalController"]; // 统计进入修改步数目标控制器的次数
+}
+
+- (void)statisticsIntoAboutUsController
+{
+    [MobClick event:@"IntoAboutUsController"]; // 统计进入关于我们控制器的次数
+}
+
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -232,6 +290,25 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     }
 }
 
+#pragma mark - Previewing delegate
+
+- (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location
+{
+    if (2 == [previewingContext sourceView].tag)
+    {
+        MMHAboutUsController *aboutUsVC = [MMHAboutUsController new];
+        return aboutUsVC;
+    }
+    return nil;
+}
+
+- (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit
+{
+    viewControllerToCommit.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewControllerToCommit animated:YES];
+    [self statisticsIntoAboutUsController];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -252,6 +329,7 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
         cell = [[MMHTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
         [cell.switchControl addTarget:self action:@selector(switchControlValueChangeAction:) forControlEvents:UIControlEventValueChanged];
     }
+    cell.tag = indexPath.row;
     
     cell.titleString = _titleArray[indexPath.row];
     cell.markString = _markArray[indexPath.row];
@@ -267,7 +345,7 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     // 显示或隐藏右侧的箭头
     if (1 == indexPath.row) cell.arrowImageViewHidden = YES;
     else cell.arrowImageViewHidden = NO;
-    
+
     // 打开或关闭 cell 的点击效果
     if (1 == indexPath.row) cell.selectionStyle = UITableViewCellSelectionStyleNone;
     else cell.selectionStyle = UITableViewCellSelectionStyleDefault;
@@ -275,6 +353,16 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     // 显示或隐藏 cell 底部的细线
     if (self.titleArray.count - 1 == indexPath.row) cell.bottomLineImageView.hidden = YES;
     else cell.bottomLineImageView.hidden = NO;
+    
+    // 添加forceTouch
+    if (2 == indexPath.row)
+    {
+        if (IS_IOS9_LATER &&
+            UIForceTouchCapabilityAvailable == self.traitCollection.forceTouchCapability)
+        {
+            [self registerForPreviewingWithDelegate:self sourceView:cell];
+        }
+    }
     
     return cell;
 }
@@ -289,42 +377,11 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     
     if ([cell.titleString isEqualToString:@"步数目标"])
     {
-        MMHSingleLineInputController *singleLineInputVC = [MMHSingleLineInputController new];
-        singleLineInputVC.navigationItem.title = @"步数目标";
-        singleLineInputVC.keyboardType = UIKeyboardTypeNumberPad; // 没有小数点的数字键盘
-        singleLineInputVC.text = [cell.markString substringWithRange:NSMakeRange(0, cell.markString.length - 1)]; // 默认显示内容
-        singleLineInputVC.placeholder = @"请输入步数";
-        WS;
-        [singleLineInputVC setDoneBlock:^(NSString *contentString) {
-            DLog(@"%@", contentString);
-            SWS;
-            if (contentString &&
-                contentString.length)
-            {
-                [MMHUserManager sharedManager].stepGoal = [contentString integerValue];
-                // 缓存用户数据
-                [[MMHUserManager sharedManager] storage];
-                // 重新加载数据
-                [strongSelf initData];
-                // 刷新表格
-                [strongSelf.tableView reloadData];
-                // 发送步数目标改变的通知
-                [[NSNotificationCenter defaultCenter] postNotificationName:kStepGoalChangeNotify object:nil];
-            }
-        }];
-        
-        singleLineInputVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:singleLineInputVC animated:YES];
-        
-        [MobClick event:@"IntoChangeStepGoalController"]; // 统计进入修改步数目标控制器的次数
+        [self pushToStepGoalControllerWithCell:cell];
     }
     else if ([cell.titleString isEqualToString:@"关于我们"])
     {
-        MMHAboutUsController *aboutUsVC = [MMHAboutUsController new];
-        aboutUsVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:aboutUsVC animated:YES];
-        
-        [MobClick event:@"IntoAboutUsController"]; // 统计进入关于我们控制器的次数
+        [self pushToAboutUSController];
     }
 }
 

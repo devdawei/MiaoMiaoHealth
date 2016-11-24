@@ -19,6 +19,6 @@
 @property (nonatomic, strong) UIButton *naviTitleButton;
 @property (nonatomic, copy) NSString *naviTitle;
 
-
+- (void)mmh_addBackBarButtonItem;
 
 @end

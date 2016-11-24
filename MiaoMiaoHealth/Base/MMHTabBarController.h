@@ -27,4 +27,6 @@
 
 + (instancetype)sharedTabBarController;
 
+- (void)naviControllerPopToRootController;
+
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9071B7E1DE400EB00997389 /* AppDelegate+ShortcutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D9071B7D1DE400EB00997389 /* AppDelegate+ShortcutItem.m */; };
 		D9B77EA01D961FF1008B0295 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77E9F1D961FF1008B0295 /* main.m */; };
 		D9B77EB91D961FF1008B0295 /* MiaoMiaoHealthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EB81D961FF1008B0295 /* MiaoMiaoHealthTests.m */; };
 		D9B77EC41D961FF1008B0295 /* MiaoMiaoHealthUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B77EC31D961FF1008B0295 /* MiaoMiaoHealthUITests.m */; };
@@ -70,6 +71,8 @@
 		41818D12298604CBC0A9862A /* libPods-MiaoMiaoHealth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MiaoMiaoHealth.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4513CF7966D3C83DACD5D805 /* Pods-MiaoMiaoHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiaoMiaoHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiaoMiaoHealth/Pods-MiaoMiaoHealth.release.xcconfig"; sourceTree = "<group>"; };
 		7953C349B8672F978F47CCF0 /* Pods-MiaoMiaoHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiaoMiaoHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiaoMiaoHealth/Pods-MiaoMiaoHealth.debug.xcconfig"; sourceTree = "<group>"; };
+		D9071B7C1DE400EB00997389 /* AppDelegate+ShortcutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ShortcutItem.h"; sourceTree = "<group>"; };
+		D9071B7D1DE400EB00997389 /* AppDelegate+ShortcutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ShortcutItem.m"; sourceTree = "<group>"; };
 		D9B77E9B1D961FF1008B0295 /* MiaoMiaoHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiaoMiaoHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B77E9F1D961FF1008B0295 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9B77EB41D961FF1008B0295 /* MiaoMiaoHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiaoMiaoHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +89,7 @@
 		D9B77ED81D96207B008B0295 /* MMHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHTabBarController.m; sourceTree = "<group>"; };
 		D9B77ED91D96207B008B0295 /* MMHTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHTableCell.h; sourceTree = "<group>"; };
 		D9B77EDA1D96207B008B0295 /* MMHTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHTableCell.m; sourceTree = "<group>"; };
-		D9B77EDC1D96207B008B0295 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B77EDC1D96207B008B0295 /* MiaoMiaoHealth-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MiaoMiaoHealth-Info.plist"; sourceTree = "<group>"; };
 		D9B77EDD1D96207B008B0295 /* MiaoMiaoHealth.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MiaoMiaoHealth.entitlements; sourceTree = "<group>"; };
 		D9B77EDE1D96207B008B0295 /* MiaoMiaoHealthy-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MiaoMiaoHealthy-PrefixHeader.pch"; sourceTree = "<group>"; };
 		D9B77EDF1D96207B008B0295 /* MMHLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MMHLaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 			children = (
 				D9B77ED21D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.h */,
 				D9B77ED31D96207B008B0295 /* AppDelegate+DidFinishLaunchHandle.m */,
+				D9071B7C1DE400EB00997389 /* AppDelegate+ShortcutItem.h */,
+				D9071B7D1DE400EB00997389 /* AppDelegate+ShortcutItem.m */,
 				D9B77ED41D96207B008B0295 /* AppDelegate.h */,
 				D9B77ED51D96207B008B0295 /* AppDelegate.m */,
 			);
@@ -275,7 +280,7 @@
 		D9B77EDB1D96207B008B0295 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				D9B77EDC1D96207B008B0295 /* Info.plist */,
+				D9B77EDC1D96207B008B0295 /* MiaoMiaoHealth-Info.plist */,
 				D9B77EDD1D96207B008B0295 /* MiaoMiaoHealth.entitlements */,
 				D9B77EDE1D96207B008B0295 /* MiaoMiaoHealthy-PrefixHeader.pch */,
 				D9B77EDF1D96207B008B0295 /* MMHLaunchScreen.storyboard */,
@@ -676,6 +681,7 @@
 				D9B77F4F1D96207B008B0295 /* UIViewController+Helper.m in Sources */,
 				D9B77F581D96207B008B0295 /* MMHSportController.m in Sources */,
 				D9B77F501D96207B008B0295 /* MMHDrinkWaterNotifyManager.m in Sources */,
+				D9071B7E1DE400EB00997389 /* AppDelegate+ShortcutItem.m in Sources */,
 				D9B77F441D96207B008B0295 /* MMHVendorConst.m in Sources */,
 				D9B77F561D96207B008B0295 /* MMHDrinkWaterTableCell.m in Sources */,
 				D9B77F3E1D96207B008B0295 /* MMHTabBarController.m in Sources */,
@@ -827,10 +833,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealthy-PrefixHeader.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/MiaoMiaoHealth/Config/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealth;
@@ -844,10 +851,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealthy-PrefixHeader.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/MiaoMiaoHealth/Config/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealth;

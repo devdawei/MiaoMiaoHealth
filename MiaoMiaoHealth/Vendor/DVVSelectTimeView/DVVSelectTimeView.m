@@ -10,7 +10,8 @@
 
 CGFloat const DVVSelectTimeViewViewHeaderViewHeight = 40.0;
 CGFloat const DVVSelectTimeViewPickerViewHeight = 160.0;
-CGFloat const DVVSelectTimeViewAnimateDuration = 0.3;
+CGFloat const DVVSelectTimeViewShowAnimateDuration = 0.7;
+CGFloat const DVVSelectTimeViewRemoveAnimateDuration = 0.3;
 CGFloat const DVVSelectTimeViewButtonHeight = 40.0;
 CGFloat const DVVSelectTimeViewPickerViewWidth = 240.0;
 
@@ -129,7 +130,7 @@ CGFloat const DVVSelectTimeViewPickerViewWidth = 240.0;
     [superView addSubview:self];
     [self configUI];
     
-    [UIView animateWithDuration:DVVSelectTimeViewAnimateDuration animations:^{
+    [UIView animateWithDuration:DVVSelectTimeViewShowAnimateDuration animations:^{
         self.backgroundEffectView.alpha = 1;
         self.containerView.alpha = 1;
     } completion:^(BOOL finished) {
@@ -137,34 +138,11 @@ CGFloat const DVVSelectTimeViewPickerViewWidth = 240.0;
     }];
     
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    keyAnimation.values = @[ @1, @1.1, @1.2, @1.3, @1.2, @1.1, @1 ];
-    keyAnimation.duration = DVVSelectTimeViewAnimateDuration;
-    keyAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    keyAnimation.values = @[@0, @0.1, @0.2, @0.3, @0.4, @0.5, @0.6, @0.7, @0.8, @0.9, @1, @1.03, @1.06, @1.09, @1.093, @1.096, @1.099, @1.1, @1.09, @1.08, @1.07, @1.06, @1.05, @1.04, @1.03, @1.02, @1.01, @1.009, @1.006, @1.003, @1];
+    keyAnimation.duration = DVVSelectTimeViewShowAnimateDuration;
+    keyAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     [self.containerView.layer addAnimation:keyAnimation forKey:nil];
     self.containerView.transform = CGAffineTransformMakeScale(1, 1);
-    
-//    // 调度组
-//    // 创建调度组
-//    dispatch_group_t group = dispatch_group_create();
-//    // 获取全局队列
-//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//    
-//    // 异步执行加载数据
-//    dispatch_group_async(group, queue, ^{
-//        
-//        
-//    });
-//    
-//    // 当之前的队列完成之后执行
-//    dispatch_group_notify(group, queue, ^{
-//        
-//        // 主线程刷新UI
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//
-//            
-//        });
-//    });
-    
 }
 
 - (void)defaultSelectedWithhour:(NSString *)hour
@@ -212,18 +190,18 @@ CGFloat const DVVSelectTimeViewPickerViewWidth = 240.0;
 - (void)removeSelf
 {
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    keyAnimation.values = @[ @1, @1.2, @1.3, @1.2, @1.1, @1, @0.5, @0 ];
+    keyAnimation.values = @[ @1, @0.999, @0.996, @0.993, @0.99, @0.96, @0.93, @0.9, @0.6, @0.3, @0 ];
 
-    keyAnimation.duration = DVVSelectTimeViewAnimateDuration;
-    keyAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    keyAnimation.duration = DVVSelectTimeViewRemoveAnimateDuration;
+    keyAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
     [self.containerView.layer addAnimation:keyAnimation forKey:nil];
     self.containerView.transform = CGAffineTransformMakeScale(0, 0);
     
-    [UIView animateWithDuration:DVVSelectTimeViewAnimateDuration animations:^{
+    [UIView animateWithDuration:DVVSelectTimeViewRemoveAnimateDuration animations:^{
         self.backgroundEffectView.alpha = 0;
     }];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DVVSelectTimeViewAnimateDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DVVSelectTimeViewRemoveAnimateDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self removeFromSuperview];
     });
 }

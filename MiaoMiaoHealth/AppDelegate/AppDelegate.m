@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+DidFinishLaunchHandle.h"
+#import "AppDelegate+ShortcutItem.h"
 #import "MMHTabBarController.h"
 
 @interface AppDelegate ()
@@ -101,6 +102,12 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
     
+}
+
+#pragma mark 处理 UIApplicationShortcutItem 事件
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    [self mmh_handleShortcutItemWithApplication:application performActionForShortcutItem:shortcutItem completionHandler:completionHandler];
 }
 
 #pragma mark 是否允许使用第三方键盘

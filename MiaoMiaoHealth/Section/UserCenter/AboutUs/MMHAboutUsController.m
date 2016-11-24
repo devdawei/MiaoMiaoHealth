@@ -40,6 +40,7 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     
     self.view.backgroundColor = [MMHAppConst controllerBgColor];
     self.naviTitle = @"关于我们";
+    [self mmh_addBackBarButtonItem];
     
     [self.view addSubview:self.tableView];
     [self.headerView addSubview:self.iconImageView];
@@ -71,6 +72,52 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     _iconImageView.backgroundColor = [UIColor lightGrayColor];
 //    _versionLabel.backgroundColor = [UIColor magentaColor];
 //    _briefLabel.backgroundColor = [UIColor orangeColor];
+}
+
+#pragma mark - Action
+
+- (void)goScore
+{
+    [DVVAppStoreTool goAppStoreScore:MMH_APP_ID];
+    
+    [MobClick event:@"GoGrade"]; // 统计去评分
+}
+
+- (void)copyWeiXin
+{
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = @"idawei987";
+    [DVVToast showMessage:@"已复制微信号"];
+    
+    [MobClick event:@"CopyWeChatAccount"]; // 统计复制微信号
+}
+
+- (void)copyMail
+{
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = @"2549129899@qq.com";
+    [DVVToast showMessage:@"已复制邮箱"];
+    
+    [MobClick event:@"CopyFeedbackMailbox"]; // 统计复制反馈邮箱
+}
+
+#pragma mark - UIPreviewActionItem
+
+- (NSArray<id<UIPreviewActionItem>> *)previewActionItems
+{
+    UIPreviewAction *goScore = [UIPreviewAction actionWithTitle:@"给个好评" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        [self goScore];
+    }];
+    
+    UIPreviewAction *copyWeiXin = [UIPreviewAction actionWithTitle:@"个人微信" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        [self copyWeiXin];
+    }];
+    
+    UIPreviewAction *copyMail = [UIPreviewAction actionWithTitle:@"反馈邮箱" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        [self copyMail];
+    }];
+    
+    return @[ goScore, copyWeiXin, copyMail ];
 }
 
 #pragma mark - UITableViewDataSource
@@ -116,25 +163,15 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     
     if ([titleString isEqualToString:@"给个好评"])
     {
-        [DVVAppStoreTool goAppStoreScore:MMH_APP_ID];
-        
-        [MobClick event:@"GoGrade"]; // 统计去评分
+        [self goScore];
     }
     else if ([titleString isEqualToString:@"个人微信"])
     {
-        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        pasteboard.string = @"idawei987";
-        [DVVToast showMessage:@"已复制微信号"];
-        
-        [MobClick event:@"CopyWeChatAccount"]; // 统计复制微信号
+        [self copyWeiXin];
     }
     else if ([titleString isEqualToString:@"反馈邮箱"])
     {
-        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        pasteboard.string = @"2549129899@qq.com";
-        [DVVToast showMessage:@"已复制邮箱"];
-        
-        [MobClick event:@"CopyFeedbackMailbox"]; // 统计复制反馈邮箱
+        [self copyMail];
     }
 }
 

@@ -45,15 +45,14 @@ static char kNaviLeftButton, kNaviRightButton, kNaviTitleButton;
 
 - (void)mmh_addBackBarButtonItemMethod
 {
+    if (!self.navigationController) return;
     if (self.navigationController.viewControllers.count < 2) return;
+    if (self.navigationItem.leftBarButtonItem) return;
     [self mmh_addBackBarButtonItem];
 }
 
 - (void)mmh_addBackBarButtonItem
 {
-    if (!self.navigationController) return;
-    if (self.navigationItem.leftBarButtonItem) return;
-    
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.frame = CGRectMake(0, 0, 20, 20);
     [backButton.imageView setContentMode:UIViewContentModeCenter];
