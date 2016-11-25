@@ -27,10 +27,14 @@ DVVCodingImplementation
     return manager;
 }
 
-#pragma mark 将这个类中的数据缓存到本地
+#pragma mark 将这个类缓存到本地
 - (BOOL)storage
 {
-    return [DVVArchiver archiverWithType:DVVArchiverTypePreferences object:self name:kStorageFileName];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    BOOL success = [DVVArchiver archiverWithType:DVVArchiverTypePreferences object:self name:kStorageFileName];
+    dispatch_semaphore_signal(semaphore);
+    return success;
 }
 
 @end

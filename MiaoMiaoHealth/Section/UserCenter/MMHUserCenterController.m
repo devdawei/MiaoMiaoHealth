@@ -191,22 +191,15 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
 
 - (void)pushToStepGoalController
 {
-    for (MMHTableCell *cell in self.tableView.visibleCells)
-    {
-        if ([cell.titleString isEqualToString:@"步数目标"])
-        {
-            [self pushToStepGoalControllerWithCell:cell];
-            break;
-        }
-    }
+    [self pushToStepGoalControllerWithStepCount:FormatString(@"%zd", [MMHUserManager sharedManager].stepGoal)];
 }
 
-- (void)pushToStepGoalControllerWithCell:(MMHTableCell *)cell
+- (void)pushToStepGoalControllerWithStepCount:(NSString *)stepCount
 {
     MMHSingleLineInputController *singleLineInputVC = [MMHSingleLineInputController new];
     singleLineInputVC.navigationItem.title = @"步数目标";
     singleLineInputVC.keyboardType = UIKeyboardTypeNumberPad; // 没有小数点的数字键盘
-    singleLineInputVC.text = [cell.markString substringWithRange:NSMakeRange(0, cell.markString.length - 1)]; // 默认显示内容
+    singleLineInputVC.text = stepCount;
     singleLineInputVC.placeholder = @"请输入步数";
     WS;
     [singleLineInputVC setDoneBlock:^(NSString *contentString) {
@@ -377,7 +370,7 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     
     if ([cell.titleString isEqualToString:@"步数目标"])
     {
-        [self pushToStepGoalControllerWithCell:cell];
+        [self pushToStepGoalControllerWithStepCount:[cell.markString substringWithRange:NSMakeRange(0, cell.markString.length - 1)]]; // 默认显示内容
     }
     else if ([cell.titleString isEqualToString:@"关于我们"])
     {

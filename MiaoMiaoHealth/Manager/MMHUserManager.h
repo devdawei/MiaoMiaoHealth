@@ -26,7 +26,7 @@
 + (instancetype)sharedManager;
 
 /**
- *  将这个类中的数据缓存到本地
+ *  将这个类缓存到本地
  */
 - (BOOL)storage;
 
