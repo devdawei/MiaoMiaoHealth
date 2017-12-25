@@ -41,7 +41,7 @@
     
     [_progressContentView addSubview:self.progressView];
     [_progressContentView addSubview:self.blurEffectView];
-    [_blurEffectView addSubview:self.stepCountLabel];
+    [_blurEffectView.contentView addSubview:self.stepCountLabel];
     
     [self configUI];
     

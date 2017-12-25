@@ -85,8 +85,8 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     [self initData];
     
     [self.headerView addSubview:self.headerContentView];
-    [_headerContentView addSubview:self.headerBgImageView];
-    [_headerContentView addSubview:self.portraitImageView];
+    [_headerContentView.contentView addSubview:self.headerBgImageView];
+    [_headerContentView.contentView addSubview:self.portraitImageView];
     self.tableView.tableHeaderView = self.headerView;
     
     self.tableView.tableFooterView = self.footerView;

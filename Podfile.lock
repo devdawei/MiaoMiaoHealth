@@ -7,14 +7,14 @@ PODS:
   - DVVLoading (1.0.1)
   - DVVToast (1.0.1)
   - FDFullscreenPopGesture (1.1)
-  - IQKeyboardManager (4.0.7)
+  - IQKeyboardManager (5.0.6)
   - Masonry (1.0.2)
   - THLabel (1.4.8)
   - UMengAnalytics-NO-IDFA (4.1.5)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - DVVActionSheetView (from `https://github.com/devdawei/DVVActionSheetView.git`, tag `v1.0.1`)
+  - DVVActionSheetView (from `https://github.com/devdawei/DVVActionSheetView.git`, tag `v1.0.2`)
   - DVVAlertView (from `https://github.com/devdawei/DVVAlertView.git`, tag `v1.0.2`)
   - DVVArchiver (from `https://github.com/devdawei/DVVArchiver.git`, tag `v1.0.0`)
   - DVVCoding (from `https://github.com/devdawei/DVVCoding.git`, tag `v1.0.1`)
@@ -22,7 +22,7 @@ DEPENDENCIES:
   - DVVLoading (from `https://github.com/devdawei/DVVLoading.git`, tag `v1.0.1`)
   - DVVToast (from `https://github.com/devdawei/DVVToast.git`, tag `v1.0.1`)
   - FDFullscreenPopGesture (~> 1.1)
-  - IQKeyboardManager (~> 4.0.4)
+  - IQKeyboardManager (~> 5.0.6)
   - Masonry (~> 1.0.1)
   - THLabel (~> 1.4.7)
   - UMengAnalytics-NO-IDFA (~> 4.1.5)
@@ -31,7 +31,7 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   DVVActionSheetView:
     :git: https://github.com/devdawei/DVVActionSheetView.git
-    :tag: v1.0.1
+    :tag: v1.0.2
   DVVAlertView:
     :git: https://github.com/devdawei/DVVAlertView.git
     :tag: v1.0.2
@@ -54,7 +54,7 @@ EXTERNAL SOURCES:
 CHECKOUT OPTIONS:
   DVVActionSheetView:
     :git: https://github.com/devdawei/DVVActionSheetView.git
-    :tag: v1.0.1
+    :tag: v1.0.2
   DVVAlertView:
     :git: https://github.com/devdawei/DVVAlertView.git
     :tag: v1.0.2
@@ -83,12 +83,12 @@ SPEC CHECKSUMS:
   DVVLoading: 1d2f919baf2d02fde23f1728e71a6c2838b9bb9a
   DVVToast: bb4464068f195e9fd495d965b39742b34662da28
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
+  IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   THLabel: a2ca21c06cd7daba5c0c6d3095d48f6c137a3d80
   UMengAnalytics-NO-IDFA: f1b08b540eba6ebad044a574cae6d988cf40cfda
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 49465a0a4b7758fc7cfb2b077ef3eb47c9c62489
+PODFILE CHECKSUM: 1b1c213e042147342e425dfede03eb116b751931
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.3.1
