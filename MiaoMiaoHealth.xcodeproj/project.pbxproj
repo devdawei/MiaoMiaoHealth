@@ -482,7 +482,6 @@
 				D9B77E971D961FF1008B0295 /* Sources */,
 				D9B77E981D961FF1008B0295 /* Frameworks */,
 				D9B77E991D961FF1008B0295 /* Resources */,
-				1237A2F280525ECFC7A37769 /* [CP] Embed Pods Frameworks */,
 				009529113E7279109184B914 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -536,12 +535,11 @@
 		D9B77E931D961FF1008B0295 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = devdawei;
 				TargetAttributes = {
 					D9B77E9A1D961FF1008B0295 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5PC72CFZ3Z;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -554,13 +552,11 @@
 					};
 					D9B77EB31D961FF1008B0295 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5PC72CFZ3Z;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D9B77E9A1D961FF1008B0295;
 					};
 					D9B77EBE1D961FF1008B0295 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5PC72CFZ3Z;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D9B77E9A1D961FF1008B0295;
 					};
@@ -629,26 +625,11 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoMiaoHealth/Pods-MiaoMiaoHealth-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1237A2F280525ECFC7A37769 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoMiaoHealth/Pods-MiaoMiaoHealth-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A7019A30D5514F5D2729C344 /* [CP] Check Pods Manifest.lock */ = {
@@ -750,15 +731,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -799,15 +788,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -840,13 +837,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealthy-PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dawei.MiaoMiaoHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -857,14 +854,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealthy-PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MiaoMiaoHealth/Config/MiaoMiaoHealth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dawei.MiaoMiaoHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -873,7 +870,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MiaoMiaoHealthTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealthTests;
@@ -886,7 +883,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MiaoMiaoHealthTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealthTests;
@@ -898,7 +895,7 @@
 		D9B77ECF1D961FF1008B0295 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MiaoMiaoHealthUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealthUITests;
@@ -910,7 +907,7 @@
 		D9B77ED01D961FF1008B0295 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 5PC72CFZ3Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MiaoMiaoHealthUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devdawei.MiaoMiaoHealthUITests;

@@ -34,9 +34,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>需要使用您的相机</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>需要读取您的健康数据</string>
+	<string>需要访问“健康”APP读取您的数据</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>需要更新您的健康数据</string>
+	<string>需要访问“健康”APP更新您的数据</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要使用您的相册</string>
 	<key>UIApplicationShortcutItems</key>
